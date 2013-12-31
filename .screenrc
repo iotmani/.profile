@@ -1,0 +1,22 @@
+# Turn off the splash screen
+startup_message off
+
+# Use a 30000-line scrollback buffer
+defscrollback 30000
+
+#bakcup with time: caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %c"
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-="
+
+#TODO Doesn't work: shelltitle "$ |bash"
+
+# Add new screen takes same dir
+
+#Deprecated:
+    # hardstatus alwayslastline
+    # hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}]'
+# To add date: [%{B}%Y-%m-%d %{W}%c %{g}]
+
+## Default screens
+#screen -t shell1  0
+#screen -t shell2  1
+#screen -t server  2   ssh me@myserver
