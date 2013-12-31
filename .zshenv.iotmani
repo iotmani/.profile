@@ -1,0 +1,24 @@
+# Remove auto correction
+unsetopt correct_all
+
+# Notifications
+alias alert="zenity --info --text \"done\!\""
+alias notify='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias n='echo -e "\a" && notify'
+
+# Terminal convenience
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias mv="mv -i"
+alias rm="rm -i"
+alias gdb="/projects/gcdev/install/bin/gdb"
+alias bashrc="vim ~/.zshenv.iotmani"
+alias srcbashrc="source ~/.zshenv.iotmani"
+
+# DB stuff
+alias sqlplus='rlwrap sqlplus'
+
+# Hg
+alias hgstold="hg st | grep -v \!"
+alias hg-nocommit="hg import --no-commit"
+alias hginc="hg import --no-commit"
