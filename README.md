@@ -1,5 +1,6 @@
 .profile
 ========
+* matrix.py
 * .screenrc
 * .vimrc, yet to upload themes and plugins folder .vim
 * .zshenv.iotmani
@@ -8,5 +9,4 @@
 
 TODO
 ____
-* matrix.py
 * notes.txt terminal cheatsheet
