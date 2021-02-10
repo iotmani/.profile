@@ -22,3 +22,13 @@ alias sqlplus='rlwrap sqlplus'
 alias hgstold="hg st | grep -v \!"
 alias hg-nocommit="hg import --no-commit"
 alias hginc="hg import --no-commit"
+
+# Temporary checkout git repo and open VS Code
+vscodetmp () {
+  local repo=$1
+  [[ ! $repo =~ "https://*" ]] && repo="https://github.com/${repo}"
+  local temp="$(mktemp -d)"
+  git clone --depth=1 "${repo}" "${temp}"
+  code --wait -n "${temp}"
+  rm -rf "${temp}"
+}
